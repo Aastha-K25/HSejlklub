@@ -1,9 +1,10 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace HSejlklub.Pages.Shared;
+namespace HSejlklub.Pages;
 
-public class Book_Både : PageModel
+public class Medlemmer : PageModel
 {
+
     public void OnGet()
     {
         

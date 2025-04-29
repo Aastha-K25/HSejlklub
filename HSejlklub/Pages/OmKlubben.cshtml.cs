@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace HSejlklub.Pages.Shared;
+namespace HSejlklub.Pages;
 
-public class Blog : PageModel
+public class OmKlubben : PageModel
 {
     public void OnGet()
     {
