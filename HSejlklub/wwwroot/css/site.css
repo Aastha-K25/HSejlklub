@@ -19,7 +19,7 @@ html {
 
 body {
   margin-bottom: 60px;
-  font-family: "Gill Sans", sans-serif;
+  font-family: "Gill Sans", sans-serif; !important;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -29,4 +29,56 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+
+.HilleroedSejlklub-text-and-image {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.Small-picture img {
+  overflow: hidden;
+  height: 15vw;
+  margin-bottom: 20px;
+  position: relative !important;
+}
+
+.HilleroedSejlklub-text-and-image p {
+  max-width: 800px;
+  color: black;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+.HilleroedSejlklub-text-and-image h6 {
+  color: black;
+  font-size: 20px;
+  font-family: "Gill Sans", sans-serif;
+  text-align: center !important;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+.HilleroedSejlklub-text-and-image b {
+  color: black;
+  font-size: 19px;
+  font-family: "Gill Sans", sans-serif;
+  text-align: center !important;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+.HilleroedSejlklub-text-and-image i {
+  color: black;
+  font-size: 17px;
+  font-family: "Gill Sans", sans-serif;
+  text-align: center !important;
+  line-height: 1.5em;
+  font-weight: bolder;
+  margin-bottom: 20px;
 }
