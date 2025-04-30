@@ -8,12 +8,80 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - HSejlklub</title>
+    <title>@ViewData["Title"] - Hillerød Sejlklub</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/Melddigind.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/HSejlklub.styles.css" asp-append-version="true" />
 </head>
+<body>
+<section class="container-medlem">
+    <header> Meld dig ind </header>
+    <form action="#" class="form">
+        <div class="medlem-box">
+            <h3>Medlemskab</h3>
+            <h6><i>Læs mere om medlemskaberne i <a class="Om-klubben-text" asp-area="" asp-page="/Omklubben">Om klubben</a></i></h6>
+            <div class="medlem-option">
+                <div class="medlemskab">
+                    <input type="radio" id="check-Junior" name="Medlem" checked>
+                    <label for="check-Junior">Junior</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" id="check-Senior" name="Medlem">
+                    <label for="check-Senior">Senior</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" id="check-Familie" name="Medlem">
+                    <label for="check-Familie">Familie</label>
+                </div>
+            </div> 
+        </div>
+        <div class="input-box">
+            <label> Navn og Efternavn</label>
+            <input type="text" placeholder="Indsæt navn og efternavn">
+            <div class="input-box">
+                <label> Email Adresse</label>
+                <input type="text" placeholder="Indsæt email adresse" required>
+            </div>
+        </div>
+        <div class="column">
+            <div class="input-box">
+                <label> Telefon nummer</label>
+                <input type="number" placeholder="Indsæt telefon nummer" required>
+            </div>
+            <div class="input-box">
+                <label> Fødselsdagsdato</label>
+                <input type="date" placeholder="Indsæt fødselsdagsdato" required>
+            </div>
+        </div>
 
-
-<h1>Meld dig ind</h1>
+        <div class="gender-box">
+            <h3>Køn</h3>
+            <div class="gender-option">
+                <div class="gender">
+                    <input type="radio" id="check-mand" name="gender" checked>
+                    <label for="check-mand">Mand</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" id="check-kvinde" name="gender">
+                    <label for="check-kvinde">Kvinde</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" id="check-other" name="gender">
+                    <label for="check-other">Ønsker ikke at oplyse</label>
+                </div>
+            </div>
+        </div>
+        <div class="input-box adresse">
+            <label> Adresse</label>
+            <input type="text" placeholder="Indsæt Adresse" required>
+            <input type="text" placeholder="Indsæt Adresse linje 2" required>
+            <div class="column">
+                <input type="text" placeholder="Indsæt by" required>
+                <input type="number" placeholder="Indsæt postnummer" required>
+            </div>
+        </div>
+        <button> Submit</button>
+    </form>
+</section>
+</body>
