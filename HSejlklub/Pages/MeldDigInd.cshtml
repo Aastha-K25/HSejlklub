@@ -21,19 +21,19 @@
         <div class="input-box">
             <label> Navn og Efternavn</label>
             <input type="text" placeholder="Indsæt navn og efternavn">
-        </div>
-        <div class="column">
             <div class="input-box">
                 <label> Email Adresse</label>
                 <input type="text" placeholder="Indsæt email adresse" required>
             </div>
+        </div>
+        <div class="column">
             <div class="input-box">
                 <label> Telefon nummer</label>
-                <input type="text" placeholder="Indsæt telefon nummer" required>
+                <input type="number" placeholder="Indsæt telefon nummer" required>
             </div>
             <div class="input-box">
                 <label> Fødselsdagsdato</label>
-                <input type="text" placeholder="Indsæt fødselsdagsdato" required>
+                <input type="date" placeholder="Indsæt fødselsdagsdato" required>
             </div>
         </div>
         
@@ -54,10 +54,27 @@
                 </div>
             </div>
         </div>
-        <div class="input-box">
+        <div class="input-box adresse">
             <label> Adresse</label>
-            <input type="text" placeholder="Indsæt adresse" required>
+            <input type="text" placeholder="Indsæt Adresse" required>
+            <input type="text" placeholder="Indsæt Adresse linje 2" required>
+            <div class="column">
+                <input type="text" placeholder="Indsæt by" required>
+                <input type="number" placeholder="Indsæt postnummer" required>
+            </div>
         </div>
+        <div class="medlem">
+            <div class="select-box">
+                <select>
+                    <option hidden>Medlemskab</option>
+                    <option>Junior</option>
+                    <option>Senior</option>
+                    <option>Familie</option>
+                </select>
+            </div>
+        </div>
+        
+        <button> Submit</button>
     </form>
 </section>
 </body>

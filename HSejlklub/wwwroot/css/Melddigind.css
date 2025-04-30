@@ -22,6 +22,7 @@
 
 .container header{
     font-size: 1.5rem;
+    
     color:#333333;
     font-weight: 500;
     text-align: center;
@@ -37,7 +38,7 @@
 .input-box .label{
     color: #333333;
 }
-.form .input-box input{
+.form :where(.input-box input){
     position: relative;
     height: 50px;
     width: 100%;
@@ -73,10 +74,56 @@
     column-gap: 5px;
     cursor: pointer;
 }
+.form input{
+    accent-color: royalblue;
+}
+
 .form :where(.gender input, .gender label){
     cursor: pointer;
 }
 
+.form button{
+    height: 55px;
+    width: 100%;
+    color: #ffffff;
+    font-size: 1rem;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    background-color: royalblue;
+}
+.form button:hover{
+    background-color: royalblue;
+}
+
+.medlem :where(input, .select-box){
+    margin-top:20px;
+}
+
+.select-box .select{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color:#707070;
+    font-size: 1rem;
+}
+
+.form :where(.select-box){
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
 
 /* Responsiv */
 @media screen and (max-width:500px){
