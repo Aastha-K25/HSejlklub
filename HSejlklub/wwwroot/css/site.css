@@ -19,7 +19,7 @@ html {
 
 body {
   margin-bottom: 60px;
-  font-family: "Gill Sans", sans-serif; !important;
+  font-family: "Gill Sans", sans-serif !important;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -47,19 +47,19 @@ body {
 }
 
 .HilleroedSejlklub-text-and-image p {
-  max-width: 800px;
+  max-width: 400px;
   color: black;
   font-family: "Gill Sans", sans-serif;
   font-size: 17px;
   line-height: 1.5em;
-  margin-bottom: 20px;
+  display: block;
+  padding: inherit;
 }
 
 .HilleroedSejlklub-text-and-image h6 {
   color: black;
   font-size: 20px;
   font-family: "Gill Sans", sans-serif;
-  text-align: center !important;
   line-height: 1.5em;
   margin-bottom: 20px;
 }
@@ -68,7 +68,6 @@ body {
   color: black;
   font-size: 19px;
   font-family: "Gill Sans", sans-serif;
-  text-align: center !important;
   line-height: 1.5em;
   margin-bottom: 20px;
 }
@@ -82,3 +81,67 @@ body {
   font-weight: bolder;
   margin-bottom: 20px;
 }
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+.text-and-image hr {
+  height: 3px;
+  border-width: 2rem;
+  color: royalblue !important;
+  background: royalblue !important;
+}
+
+.HilleroedSejlklub-text
+{
+  color: black;
+  font-size: 20px;
+  font-family: "Gill Sans", sans-serif;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+.HilleroedSejlklub-text p {
+  color: black;
+  font-size:17px;
+  font-family: "Gill Sans", sans-serif;
+  line-height: 1.5em;
+}
+.HilleroedSejlklub-text h5
+{
+  color: black;
+  font-size: 25px;
+  font-family: "Gill Sans", sans-serif;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+.Mellem hr{
+  height: 3px;
+  border-width: 1rem;
+  color: royalblue !important;
+  background: royalblue !important;
+}
+
+.overskrift h1{
+    font-size: 2rem;
+    color:#333333;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 1.5rem;
+   margin-bottom: 2rem;
+  }
+
+.container text-center{
+  font-family:"Gill Sans", sans-serif;
+}
+.medlem-box h3{
+  color: #000000;
+  margin-bottom: 8px;
+  font-size: 17px;
+  font-family: "Gill Sans", sans-serif;
+}
+.MeldDigInd-text {
+    color:#000000;
+  }
