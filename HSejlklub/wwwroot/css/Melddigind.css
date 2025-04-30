@@ -1,6 +1,6 @@
 
 *{
-    font-family: "Poppins", sans-serif;
+    font-family: "Gill Sans", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,7 +22,6 @@
 
 .container header{
     font-size: 1.5rem;
-    
     color:#333333;
     font-weight: 500;
     text-align: center;
@@ -99,32 +98,33 @@
     background-color: royalblue;
 }
 
-.medlem :where(input, .select-box){
-    margin-top:20px;
+.form .medlem-box{
+    margin-top: 20px;
 }
-
-.select-box .select{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    color:#707070;
+.medlem-box h3{
+    color: #333333;
     font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
 }
 
-.form :where(.select-box){
-    position: relative;
-    height: 50px;
-    width: 100%;
-    outline: none;
-    font-size: 1rem;
-    color: #707070;
-    margin-top: 8px;
-    border: 1px solid #dddddd;
-    border-radius: 6px;
-    padding: 0 15px;
+.form :where(.medlem-option, .medlem) {
+    display: flex;
+    align-items: center;
+    column-gap:50px;
+    flex-wrap:wrap;
+}
+.form .medlem{
+    column-gap: 5px;
+    cursor: pointer;
+}
+.form input{
+    accent-color: royalblue;
 }
 
+.form :where(.medlem input, .medlem label){
+    cursor: pointer;
+}
 /* Responsiv */
 @media screen and (max-width:500px){
     .form .column{
@@ -134,5 +134,9 @@
     .form :where(.gender-option, .gender){
         row-gap:15px;
         
+    }
+    .form :where(.medlem-option, .medlem){
+        row-gap:15px;
+
     }
 }

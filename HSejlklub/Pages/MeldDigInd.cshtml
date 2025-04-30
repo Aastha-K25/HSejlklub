@@ -18,6 +18,23 @@
 <section class="container">
     <header> Meld dig ind </header>
     <form action="#" class="form">
+        <div class="medlem-box">
+            <h3>Medlemskab</h3>
+            <div class="medlem-option">
+                <div class="medlemskab">
+                    <input type="radio" id="check-Junior" name="Medlem" checked>
+                    <label for="check-Junior">Junior</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" id="check-Senior" name="Medlem">
+                    <label for="check-Senior">Senior</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" id="check-Familie" name="Medlem">
+                    <label for="check-Familie">Familie</label>
+                </div>
+            </div> 
+        </div>
         <div class="input-box">
             <label> Navn og Efternavn</label>
             <input type="text" placeholder="Indsæt navn og efternavn">
@@ -36,7 +53,7 @@
                 <input type="date" placeholder="Indsæt fødselsdagsdato" required>
             </div>
         </div>
-        
+
         <div class="gender-box">
             <h3>Køn</h3>
             <div class="gender-option">
@@ -63,17 +80,6 @@
                 <input type="number" placeholder="Indsæt postnummer" required>
             </div>
         </div>
-        <div class="medlem">
-            <div class="select-box">
-                <select>
-                    <option hidden>Medlemskab</option>
-                    <option>Junior</option>
-                    <option>Senior</option>
-                    <option>Familie</option>
-                </select>
-            </div>
-        </div>
-        
         <button> Submit</button>
     </form>
 </section>
