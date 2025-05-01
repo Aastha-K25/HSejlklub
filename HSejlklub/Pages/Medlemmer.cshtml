@@ -1,9 +1,5 @@
 @page
-@using Microsoft.AspNetCore.Mvc.TagHelpers
-
-@functions {
-    public object Medlem { get; set; }
-}
+@model HSejlklub.Pages.MedlemslisteModel
 
 
 @{
@@ -33,7 +29,7 @@
     </tr>
     </thead>
     <tbody>
-    @foreach (var medlem in Model.Medlemmer)
+    @foreach (var medlem in Model.Medlem)
     {
         <tr>
             <td>@medlem.Fornavn</td>
