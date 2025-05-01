@@ -5,7 +5,6 @@ using HSejlklub.Models.Repositories;
 using System.Collections.Generic;
 using HSejlklub.Pages;
 
-
 public class Medlem
 {
     public string Fornavn { get; set; }
