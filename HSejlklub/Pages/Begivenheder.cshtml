@@ -10,8 +10,115 @@
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/HSejlklub.styles.css" asp-append-version="true" />
 </head>
-<html>
 
-<h2> Begivenheder</h2>
+<html>
+<body>
+<h2 class="mt-4">Tilmelding til begivenhed</h2>
+<form id="signupForm" class="mb-5">
+    <label for="Email">Email:</label>
+    <input type="Text" id="Email" class="form-control mb-2" required />
+
+    <label for="SelectType">Vælg Begivenhed:</label>
+    <select id="SelectType" class="form-control mb-2" required>
+        <option value="Standerhejsning">Standerhejsning</option>
+        <option value="Arbejdsdag">Arbejdsdag</option>
+        <option value="Bro-optagning">Bro-optagning</option>
+        <option value="Sommerfrokost">Sommerfrokost</option>
+    </select>
+
+    <button type="button" onclick="tilmeldMedlem()" class="btn btn-primary">Tilmeld</button>
+</form>
+
+<h2 class="mt-5">Opret en Begivenhed</h2>
+<form id="eventForm">
+    <label for="EventType"> Begivenhedens navn:</label>
+    <input type="Text" id="EventType" class="form-control mb-2" required />
+
+    <label for="eventDate">Dato og Tid:</label>
+    <input type="datetime-local" id="eventDate" class="form-control mb-2" required />
+
+    <button type="button" onclick="opretBegivenhed()" class="btn btn-success">Opret Begivenhed</button>
+</form>
+
+<script>
+    const events = [];
+    const registrations = [];
+
+    function opretBegivenhed() {
+        const eventType = document.getElementById('EventType').value;
+        const eventDateStr = document.getElementById('eventDate').value;
+        const eventDate = new Date(eventDateStr);
+
+        const nyEvent = {
+            id: Date.now(),
+            text: eventType,
+            date: eventDate
+        };
+
+        events.push(nyEvent);
+        opdaterEventListe();
+        opdaterEventDropdown();
+    }
+
+    function opdaterEventListe() {
+        const container = document.getElementById('eventList');
+        container.innerHTML = '';
+
+        events.forEach(ev => {
+            const card = document.createElement('div');
+            card.classList.add('booking-card');
+
+            card.innerHTML = `
+                <p><strong>EventType:</strong> ${ev.text}</p>
+                <p><strong>Dato:</strong> ${ev.date.toLocaleString()}</p>
+            `;
+
+            container.appendChild(card);
+        });
+    }
+
+
+    function opdaterEventDropdown() {
+        const select = document.getElementById('SelectType');
+        select.innerHTML = '';
+        events.forEach(ev => {
+            const option = document.createElement('option');
+            option.value = ev.id;
+            option.textContent = `${ev.type} - ${ev.date.toLocaleString()}`;
+            select.appendChild(option);
+        });
+    }
+
+    function tilmeldMedlem() {
+        const medlemsID = parseInt(document.getElementById('Email').value);
+        const eventID = parseInt(document.getElementById('SelectType').value);
+        const event = events.find(e => e.id === eventID);
+
+        if (event) {
+            registrations.push({Email, eventID });
+            opdaterTilmeldinger();
+        }
+    }
+
+    function opdaterTilmeldinger() {
+        const container = document.getElementById('registrations');
+        container.innerHTML = '';
+
+        registrations.forEach(reg => {
+            const event = events.find(e => e.id === reg.eventID);
+
+            const card = document.createElement('div');
+            card.classList.add('booking-card');
+
+            card.innerHTML = `
+                <p><strong>Email:</strong> ${reg.Email}</p>
+                <p><strong>EventType:</strong> ${event.Text}</p>
+                <p><strong>Dato:</strong> ${event.date.toLocaleString()}</p>
+            `;
+
+            container.appendChild(card);
+        });
+    }
+</script>
+</body>
