@@ -1,6 +1,10 @@
 @page
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 
+@functions {
+    public object Medlem { get; set; }
+}
+
 
 @{
     Layout = "Shared/_Layout";
@@ -29,7 +33,7 @@
     </tr>
     </thead>
     <tbody>
-    @foreach (var medlem in Models.Medlem)
+    @foreach (var medlem in Model.Medlemmer)
     {
         <tr>
             <td>@medlem.Fornavn</td>
