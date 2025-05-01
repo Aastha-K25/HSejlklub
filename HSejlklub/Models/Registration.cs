@@ -1,6 +1,6 @@
 namespace HSejlklub.Models;
 
-public class Begivenheder
+public class Registration
 {
     
 }
