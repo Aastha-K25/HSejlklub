@@ -14,10 +14,13 @@
 
 <html>
 <body>
-<h2 class="mt-4">Tilmelding til begivenhed</h2>
+<div class="overskrift">
+    <h1><b>Tilmelding til begivenhed</b></h1>
+</div>
+<hr/>
 <form id="signupForm" class="mb-5">
     <label for="Email">Email:</label>
-    <input type="Text" id="Email" class="form-control mb-2" required />
+    <input type="Text" id="Email" class="form-control mb-2" required/>
 
     <label for="SelectType">Vælg Begivenhed:</label>
     <select id="SelectType" class="form-control mb-2" required>
@@ -33,10 +36,10 @@
 <h2 class="mt-5">Opret en Begivenhed</h2>
 <form id="eventForm">
     <label for="EventType"> Begivenhedens navn:</label>
-    <input type="Text" id="EventType" class="form-control mb-2" required />
+    <input type="Text" id="EventType" class="form-control mb-2" required/>
 
     <label for="eventDate">Dato og Tid:</label>
-    <input type="datetime-local" id="eventDate" class="form-control mb-2" required />
+    <input type="datetime-local" id="eventDate" class="form-control mb-2" required/>
 
     <button type="button" onclick="opretBegivenhed()" class="btn btn-success">Opret Begivenhed</button>
 </form>
