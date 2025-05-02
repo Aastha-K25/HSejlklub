@@ -205,3 +205,43 @@ body {
   background-color: #f2f2f2;
 }
 
+.Indersiden-img-and-text img {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+.Stævne-img img {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+.Laser-img img {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+body{
+  text-align: center;
+}
+
+img:nth-child(3n+1) {
+  clear: left;
+  display: inline-block;
+}
+
