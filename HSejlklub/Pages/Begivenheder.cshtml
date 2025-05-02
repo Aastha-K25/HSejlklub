@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - HSejlklub</title>
+    <title>@ViewData["Title"] - Hillerød Sejlklub</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -19,8 +19,8 @@
 </div>
 <hr/>
 <form id="signupForm" class="mb-5">
-    <label for="Email">Email:</label>
-    <input type="Text" id="Email" class="form-control mb-2" required/>
+    <label for="EmailId">Email:</label>
+    <input type="Text" id="EmailId" class="form-control mb-2" required/>
 
     <label for="SelectType">Vælg Begivenhed:</label>
     <select id="SelectType" class="form-control mb-2" required>
@@ -55,7 +55,7 @@
 
         const nyEvent = {
             id: Date.now(),
-            text: eventType,
+            type: eventType,
             date: eventDate
         };
 
@@ -73,7 +73,7 @@
             card.classList.add('booking-card');
 
             card.innerHTML = `
-                <p><strong>EventType:</strong> ${ev.text}</p>
+                <p><strong>EventType:</strong> ${ev.type}</p>
                 <p><strong>Dato:</strong> ${ev.date.toLocaleString()}</p>
             `;
 
@@ -94,12 +94,12 @@
     }
 
     function tilmeldMedlem() {
-        const medlemsID = parseInt(document.getElementById('Email').value);
+        const medlemsID = parseInt(document.getElementById('EmailId').value);
         const eventID = parseInt(document.getElementById('SelectType').value);
         const event = events.find(e => e.id === eventID);
 
         if (event) {
-            registrations.push({Email, eventID });
+            registrations.push({emailId, eventID });
             opdaterTilmeldinger();
         }
     }
@@ -115,7 +115,7 @@
             card.classList.add('booking-card');
 
             card.innerHTML = `
-                <p><strong>Email:</strong> ${reg.Email}</p>
+                <p><strong>EmailId:</strong> ${reg.Type}</p>
                 <p><strong>EventType:</strong> ${event.Text}</p>
                 <p><strong>Dato:</strong> ${event.date.toLocaleString()}</p>
             `;
