@@ -1,4 +1,4 @@
-namespace Hillerød_Sejklub.Models
+namespace HSejlklub.Models
 {
     // Model for en båd
     public class Boat
@@ -15,9 +15,9 @@ namespace Hillerød_Sejklub.Models
         public int BådID { get; set; }
         public int MedlemsID { get; set; }
         public DateTime SejlTid { get; set; }
-        public string Mødested { get; set; }
+        public string? Mødested { get; set; }
 
-        public Boat(int boatId, string name, string model, string sailNumber, string engineInfo, int buildYear, bool isAvailable, string imagePath)
+        public Boat (int boatId, string name, string model, string sailNumber, string engineInfo, int buildYear, bool isAvailable, string imagePath)
         {
             BoatId = boatId;
             Name = name;

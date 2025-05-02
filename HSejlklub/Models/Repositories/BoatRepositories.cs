@@ -1,8 +1,7 @@
 using System.Collections.Generic;
-using Hillerød_Sejklub.Models;
 using HSejlklub.Models;
 
-namespace Hillerød_Sejklub.Models.Repositories
+namespace HSejlklub.Models.Repositories
 {
     // Repository til at håndtere både
     public class BoatRepository
