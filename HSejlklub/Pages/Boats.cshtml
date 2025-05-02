@@ -21,7 +21,8 @@
 
 <body>
     <div class="text-center">
-        <h1>Book en Båd</h1>
+        <h1><b>Book en Båd</b></h1>
+        <hr/>
         <form id="bookingForm">
             <label for="bådID">Båd ID:</label>
             <input type="number" id="bådID" name="bådID" required><br><br>
@@ -38,8 +39,8 @@
             <button type="button" onclick="bookBåd()">Book båd</button>
         </form>
     </div>
-
-    <h1 class="text-center">Booking Log</h1>
+<hr/>
+<h1 class="text-center"><b>Booking Log</b></h1>
     <div id="bookingLog" class="booking-container"></div>
 
     <script>
@@ -102,10 +103,10 @@
 
 
 
+<hr></hr>
 
-
-<h1 class="text-center">Liste af vores både</h1>
-<h2>Sejlbåde</h2>
+<h1 class="text-center"><b>Liste af vores både</b></h1>
+<h2><b>Sejlbåde</b></h2>
 
 
 
@@ -116,7 +117,7 @@
             <div class="card mb-4">
                 <div class="card-body">
                     <h5 class="card-title text-center">@sailboat.Name</h5>
-                    <img src="@Url.Content("~/Media/" + sailboat.ImagePath)" class="card-img-top" alt="@sailboat.Name" />
+                    <img src="@Url.Content("~/Images/" + sailboat.ImagePath)" class="card-img-top" alt="@sailboat.Name" />
                     <p class="card-text">Model: @sailboat.Model</p>
                     <p class="card-text">Årgang: @sailboat.BuildYear</p>
                     <p class="card-text">Antal sejl: @sailboat.NumberOfSails</p>
@@ -125,8 +126,8 @@
         </div>
     }
 </div>
-
-<h2>Motorbåde</h2>
+<hr></hr>
+<h2><b>Motorbåde</b></h2>
 <div class="row">
     @foreach (Motorboat motorboat in Model.Motorboats)
     {
@@ -134,7 +135,7 @@
             <div class="card mb-4">
                 <div class="card-body">
                     <h5 class="card-title text-center">@motorboat.Name</h5>
-                    <img src="@Url.Content("~/Media/" + motorboat.ImagePath)" class="card-img-top" alt="@motorboat.Name" />
+                    <img src="@Url.Content("~/Images/" + motorboat.ImagePath)" class="card-img-top" alt="@motorboat.Name" />
                     <p class="card-text">Model: @motorboat.Model</p>
                     <p class="card-text">Årgang: @motorboat.BuildYear</p>
                     <p class="card-text">Motortype: @motorboat.EngineType</p>
